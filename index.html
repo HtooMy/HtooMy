@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function validated(){
+            var username = document.getElementById("name");
+            var password = document.getElementById("password");
+
+            if(username.value=="ninja" && password.value == "asd12345"){
+                alert("Login successfull");
+                window.location.href = "welcome.html";
+                return false;
+            } else{
+                alert("Invalid login")
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    
+    <div style="text-align: center;">
+        <h1>Login Here</h1>
+        <form class="login_form" method="post" name="form">
+            <input type="text" id="name" name="name" placeholder="User Name"> <br>
+            <input type="password" id="password" name="password" placeholder="Password"> <br> <br>
+            <button type="submit" value="Login" onclick="return validated()">Login</button>
+        </form> 
+    </div>
+
+</body>
+</html>
